@@ -1,0 +1,10 @@
+<resources>
+  <string name="app_name">ComposeMemeory</string>
+  
+  <string name="game_state_idle"></string>
+  <string name="game_state_hint">Memorize</string>
+  <string name="game_state_wrong">Wrong</string>
+  <string name="game_state_correct">Correct</string>
+  <string name="game_state_in_progress">Find Color Tiles</string>
+  <string name="game_state_clear">Clear</string>
+</resources>
