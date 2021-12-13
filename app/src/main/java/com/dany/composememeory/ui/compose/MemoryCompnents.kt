@@ -52,7 +52,7 @@ fun GameStateGuidePreview() {
 }
 
 @Composable
-fun MemoryArray(
+fun MemoryTileArray(
   tiles: Array<Array<MemoryItem>>,
   onTileClick: (MemoryItem) -> Unit,
 ) {

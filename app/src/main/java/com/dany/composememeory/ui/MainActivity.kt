@@ -6,19 +6,14 @@ import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.dany.composememeory.model.MemoryItem
 import com.dany.composememeory.ui.compose.GameStateGuide
-import com.dany.composememeory.ui.compose.MemoryArray
+import com.dany.composememeory.ui.compose.MemoryTileArray
 import com.dany.composememeory.ui.theme.ComposeMemeoryTheme
 import com.dany.composememeory.viewmodel.MemoryViewModel
 
@@ -45,7 +40,7 @@ fun MemoryGame(viewModel: MemoryViewModel) {
         modifier = Modifier.fillMaxSize(),
         contentAlignment = Alignment.Center
       ) {
-        MemoryArray(tiles = viewModel.tiles, onTileClick = {
+        MemoryTileArray(tiles = viewModel.tiles, onTileClick = {
           viewModel.onTileClick(it)
         })
       }
@@ -62,6 +57,6 @@ fun DefaultPreview() {
     }
   }
   ComposeMemeoryTheme {
-    MemoryArray(tiles = tiles, onTileClick = {})
+    MemoryTileArray(tiles = tiles, onTileClick = {})
   }
 }
